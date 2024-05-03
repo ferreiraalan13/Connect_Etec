@@ -1,4 +1,4 @@
-Atividade de recuperação PWIII
+Atividade: Entregar duas telas de consulta de duas entidades
 Professor: Ericles de Lima Araujo
 
 Integrantes do grupo:

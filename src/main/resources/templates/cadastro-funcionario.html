@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de Funcionario</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cadastro de Funcionario</h1>
+      <form action="#" th:action="@{/save}" th:object="${curso}" method="post">
+        <div class="form-group">
+          <label for="login">Email:</label><br />
+          <input
+		  maxlength="50"
+            type="text"
+            id="login"
+            class="texto"
+            th:field="*{login}"
+			required
+          /><br />
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha:</label><br />
+          <input maxlength="50" type="password" id="senha" th:field="*{senha}" required/><br />
+        </div>
+        <div class="form-group">
+          <label for="nomeCompleto">Nome Completo:</label><br />
+          <input
+		  maxlength="50"
+            type="text"
+            id="nomeCompleto"
+            th:field="*{nomeCompleto}"
+			required
+          /><br />
+        </div>
+        <div class="form-group">
+          <label for="nomeSocial">Nome Social:</label><br />
+          <input maxlength="50" type="text" id="nomeSocial" th:field="*{nomeSocial}"/><br />
+        </div>
+		
+		<div class="form-group">
+			<label for="cargo">Cursos:</label>
+				<div class="custom-select">
+					<select name="cargo" id="cargo" th:field="*{cargo}" required >
+						<option value="Professor">Professor(a)</option>
+						<option value="Diretor">Diretor(a)</option>
+						<option value="Coordenador">Coordenador(a)</option>
+						<option value="Servicos Gerais">Servicos gerais</option>
+						<option value="Auxiliar Docente">Auxiliar Docente</option>
+						<option value="Outros">Outros</option>
+					</select>
+				</div>
+		</div>
+		
+		<div class="form-group">
+		          <label for="NivelAcesso">Nível de Acesso:</label>
+		          <div class="custom-select">
+		            <select name="NivelAcesso" id="NivelAcesso" th:field="*{NivelAcesso}" required >
+		              <option value="BAIXO">Baixo</option>
+		              <option value="MEDIO">Medio</option>
+		              <option value="ALTO">Alto</option>
+		            </select>
+		          </div>
+		        </div>
+		
+        <br />
+        <button type="submit">Cadastrar</button>
+      </form>
+	  <br/>
+	  <a href="/" class="btn">Voltar a pagina inicial</a>
+    </div>
+  </body>
+</html>
